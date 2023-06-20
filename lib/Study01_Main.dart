@@ -1,9 +1,9 @@
-class Study01 {
+class Study01_Main {
   final String name;
   final int membersCount;
 
   // 생성자
-  Study01(String name, int membersCount)
+  Study01_Main(String name, int membersCount)
     : this.name = name,
       this.membersCount = membersCount;
 
@@ -12,7 +12,7 @@ class Study01 {
    *  {클래스명.네임드 생성자명} 형식
    *  나머지 과정은 기본 생성자와 같습니다.
    */
-  Study01.fromMap(Map<String, dynamic> map)
+  Study01_Main.fromMap(Map<String, dynamic> map)
     : this.name = map['name'],
       this.membersCount = map['membersCount'];
 
@@ -23,11 +23,11 @@ class Study01 {
 
 void main() {
   // 기본 생성자 사용
-  Study01 test01 = Study01('홍길동', 5);
+  Study01_Main test01 = Study01_Main('홍길동', 5);
   test01.sayName();
 
   // fromMap 이라는 네임드 생성자 사용
-  Study01 test02 = Study01.fromMap({
+  Study01_Main test02 = Study01_Main.fromMap({
     'name' : '테스트',
     'membersCount' : 8,
   });
